@@ -8,6 +8,10 @@ const serif = Instrument_Serif({ variable: "--font-serif", subsets: ["latin"], w
 export const metadata: Metadata = {
   title: "Taruvingaekie | Premium Lawns & Landscapes",
   description: "Premium lawn supply, professional installation, lawn care and large-area mowing. Call or WhatsApp 077 271 1588.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
