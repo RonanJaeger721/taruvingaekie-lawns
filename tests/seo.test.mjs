@@ -3,7 +3,7 @@ import { spawn } from 'node:child_process';
 import { after, before, test } from 'node:test';
 import sharp from 'sharp';
 
-const canonicalOrigin = 'https://taruvingaekie-lawns.vercel.app';
+const canonicalOrigin = 'https://www.ekiegardens.co.zw';
 const paths = ['/', '/contact', '/durban-lawn', '/kikuyu-lawn', '/bulk-lawn-supply', '/lawn-delivery-installation-zimbabwe'];
 const base = process.env.SEO_BASE_URL || 'http://localhost:3107';
 const pages = new Map();

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://taruvingaekie-lawns.vercel.app";
+export const siteUrl = "https://www.ekiegardens.co.zw";
 export const businessId = `${siteUrl}/#business`;
 export const searchPages = [
   { slug: "durban-lawn", label: "Durban lawn", description: "Dense, lush lawn · US$4/m²" },

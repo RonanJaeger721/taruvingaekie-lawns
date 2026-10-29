@@ -1,6 +1,6 @@
 # Ekie Gardens search visibility
 
-Canonical website: https://taruvingaekie-lawns.vercel.app/
+Canonical website: https://www.ekiegardens.co.zw/
 
 ## Implemented in the website
 
@@ -14,9 +14,9 @@ Canonical website: https://taruvingaekie-lawns.vercel.app/
 
 ## Account-dependent launch steps — not completed by code changes
 
-1. In Google Search Console, add the URL-prefix property `https://taruvingaekie-lawns.vercel.app/`. Use the client-controlled Google account. For a Vercel subdomain, URL-prefix verification is appropriate; ownership of `vercel.app` is not available to this client.
+1. In Google Search Console, add the URL-prefix property `https://www.ekiegardens.co.zw/` using the client-controlled Google account. Alternatively, verify the domain property `ekiegardens.co.zw` through its DNS provider to cover all hostnames and protocols. Do not alter existing DNS records unnecessarily.
 2. Use the HTML-tag verification method. Add only the supplied verification token as `GOOGLE_SITE_VERIFICATION` on the correct Vercel project, rebuild, and finish verification in Search Console. Do not paste passwords or authentication secrets into source control.
-3. Submit `https://taruvingaekie-lawns.vercel.app/sitemap.xml`, inspect the six canonical pages and request indexing where appropriate. This requests crawling; it does not guarantee indexing or placement.
+3. Submit `https://www.ekiegardens.co.zw/sitemap.xml`, inspect the six canonical pages and request indexing where appropriate. This requests crawling; it does not guarantee indexing or placement.
 4. Claim/verify the real Ekie Gardens Google Business Profile if one exists, or create it with the client's permission. Avoid duplicate listings. Use accurate client-confirmed address, category, visiting arrangements and service area. Confirm the real farm entrance, actual hours and storefront/service-area eligibility before publishing them.
 5. Use both confirmed phone numbers, the canonical website link, the supplied logo and genuine farm/harvest photographs. Keep business name and address consistent across Facebook and other real listings. Add social links only after the client supplies the official profile URLs.
 6. Invite real customers to leave honest reviews and reply to them. Do not buy or fabricate reviews, links or keyword-stuffed business names.
@@ -26,14 +26,14 @@ Canonical website: https://taruvingaekie-lawns.vercel.app/
 
 Actual site-preparation scope, planting/aftercare instructions, confirmed availability, delivery timing, verified customer project photos, opening hours and exact farm pin. Publish only when supplied and checked. Do not generate near-identical city pages or claim local offices that do not exist.
 
-If the business adopts a custom domain, plan the change: verify ownership, connect it, redirect the old host, update `siteUrl` in `lib/seo.ts`, update canonical URLs/sitemap/social metadata and Search Console properties. Do not change domains just for a speculative ranking benefit.
+The custom domain is connected to Vercel. The bare domain redirects to `www`, and all canonical URLs, structured-data identifiers, sitemap and social metadata use `www.ekiegardens.co.zw`. The legacy Vercel hostname remains accessible with canonical tags pointing to the custom domain. Search Console verification and submission must use the custom domain; this release does not claim that Google has indexed it.
 
 ## Checks
 
 `npm test` builds the production site and tests all six rendered pages, metadata, JSON-LD, pricing, internal links, sitemap, robots, social image, media restraint and 404 behavior. `npm run test:seo` tests an existing build. To check the public release in PowerShell:
 
 ```powershell
-$env:SEO_BASE_URL='https://taruvingaekie-lawns.vercel.app'
+$env:SEO_BASE_URL='https://www.ekiegardens.co.zw'
 npm.cmd run test:seo
 Remove-Item Env:SEO_BASE_URL
 ```
