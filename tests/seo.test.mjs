@@ -66,6 +66,9 @@ test('business schema has the real identity, two contacts and no fabricated rati
     assert.equal(business.areaServed.name, 'Zimbabwe');
     assert.deepEqual(business.contactPoint.map(point => point.telephone), ['+263772711588', '+263719711588']);
     assert.ok(!business.geo && !business.aggregateRating && !business.openingHours);
+    for (const offer of business.hasOfferCatalog.itemListElement) {
+      assert.deepEqual(offer.itemOffered, { '@id': `${offer.url}#product` }, 'catalog references the complete product on its dedicated page');
+    }
   }
 });
 

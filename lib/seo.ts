@@ -32,8 +32,8 @@ export const businessSchema = {
       areaServed: { "@type": "Country", name: "Zimbabwe" },
       contactPoint: ["+263772711588", "+263719711588"].map(telephone => ({ "@type": "ContactPoint", telephone, contactType: "sales", availableLanguage: "English", areaServed: "ZW" })),
       hasOfferCatalog: { "@type": "OfferCatalog", name: "Instant lawn supply", itemListElement: [
-        { "@type": "Offer", url: `${siteUrl}/durban-lawn`, priceCurrency: "USD", price: "4.00", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "USD", price: "4.00", unitCode: "MTK", unitText: "per square metre" }, itemOffered: { "@type": "Product", name: "Durban lawn", description: "Durban instant lawn per m², including nationwide delivery and installation." } },
-        { "@type": "Offer", url: `${siteUrl}/kikuyu-lawn`, priceCurrency: "USD", price: "2.00", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "USD", price: "2.00", unitCode: "MTK", unitText: "per square metre" }, itemOffered: { "@type": "Product", name: "Kikuyu lawn", description: "Kikuyu instant lawn per m², including nationwide delivery and installation." } },
+        { "@type": "Offer", name: "Durban lawn per m²", url: `${siteUrl}/durban-lawn`, priceCurrency: "USD", price: "4.00", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "USD", price: "4.00", unitCode: "MTK", unitText: "per square metre" }, itemOffered: { "@id": `${siteUrl}/durban-lawn#product` } },
+        { "@type": "Offer", name: "Kikuyu lawn per m²", url: `${siteUrl}/kikuyu-lawn`, priceCurrency: "USD", price: "2.00", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "USD", price: "2.00", unitCode: "MTK", unitText: "per square metre" }, itemOffered: { "@id": `${siteUrl}/kikuyu-lawn#product` } },
       ] },
     },
     { "@type": "WebSite", "@id": `${siteUrl}/#website`, name: "Ekie Gardens", url: siteUrl, inLanguage: "en-ZW", publisher: { "@id": businessId } },
